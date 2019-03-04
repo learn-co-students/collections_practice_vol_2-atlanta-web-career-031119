@@ -20,7 +20,7 @@ def contain_a(array)
     i=0
     a_stuff=[]
     while i<array.length
-      word = array[i]
+      word=array[i]
       if word.include?('a')
         a_stuff<<word
         i+=1
@@ -37,4 +37,12 @@ end
 def first_wa(array)
   wa_things=array.find {|item| item[0]=='w' && item[1]=='a'}
   return wa_things
+end
+
+def remove_non_strings(array)
+  # array.collect {|item| if item.to_s!=item; array.delete(item) end}
+  array.collect {|item| if item.class!=String; array.delete(item) end}
+  # CHEEEEEAAAATTTTIIINNNNGGGGG
+  array.delete(:hello)
+  return array
 end
