@@ -1,37 +1,29 @@
 # your code goes here
 def begins_with_r(array)
-  if array.length>0
-    i=0
-    while i<array.length
-      if array[i][0] == 'r'
-        i+=1
-      else
-        return false
-      end
+  i=0
+  while i<array.length
+    if array[i][0] == 'r'
+      i+=1
+    else
+      return false
     end
-    return true
-  else
-    return false
   end
+  return true
 end
 
 def contain_a(array)
-  if array.length>0
-    i=0
-    a_stuff=[]
-    while i<array.length
-      word=array[i]
-      if word.include?('a')
-        a_stuff<<word
-        i+=1
-      else
-        i+=1
-      end
+  i=0
+  a_stuff=[]
+  while i<array.length
+    word=array[i]
+    if word.include?('a')
+      a_stuff<<word
+      i+=1
+    else
+      i+=1
     end
-    return a_stuff
-  else
-    return nil
   end
+  return a_stuff
 end
 
 def first_wa(array)
@@ -45,4 +37,10 @@ def remove_non_strings(array)
   # CHEEEEEAAAATTTTIIINNNNGGGGG
   array.delete(:hello)
   return array
+end
+
+def count_elements(array)
+  count_hash=[]
+  count_hash<<array.uniq.collect {|item| [{:count array.count(item), item}]}
+  return count_hash
 end
