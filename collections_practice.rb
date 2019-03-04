@@ -7,5 +7,9 @@ def begins_with_r(array)
         i+=1
       else
         return false
+      end
+    end
+  else
+    return
   end
 end
