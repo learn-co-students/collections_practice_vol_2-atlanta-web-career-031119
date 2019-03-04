@@ -21,14 +21,14 @@ def contain_a(array)
     a_stuff=[]
     while i<array.length
       word = array[i]
-      if word.include? :'a'
+      if word.include?('a')
         a_stuff<<word
         i+=1
       else
         i+=1
       end
-      return a_stuff
     end
+    return a_stuff
   else
     return nil
   end
