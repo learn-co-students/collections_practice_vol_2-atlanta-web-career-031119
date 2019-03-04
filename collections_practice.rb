@@ -20,8 +20,9 @@ def contain_a(array)
     i=0
     a_stuff=[]
     while i<array.length
-      if array[i].include? :'a'
-        a_stuff<<array[i]
+      word = array[i]
+      if word.include? :'a'
+        a_stuff<<word
         i+=1
       else
         i+=1
