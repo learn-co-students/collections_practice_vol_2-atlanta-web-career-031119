@@ -33,3 +33,8 @@ def contain_a(array)
     return nil
   end
 end
+
+def first_wa(array)
+  wa_things=array.find {|item| item[0]=='w' && item[1]=='a'}
+  return wa_things
+end
