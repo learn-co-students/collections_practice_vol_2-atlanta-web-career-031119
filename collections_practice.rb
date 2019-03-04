@@ -8,9 +8,27 @@ def begins_with_r(array)
       else
         return false
       end
-      return true
     end
+    return true
   else
     return false
+  end
+end
+
+def contain_a(array)
+  if array.length>0
+    i=0
+    a_stuff=[]
+    while i<array.length
+      if array[i].include? :'a'
+        a_stuff<<array[i]
+        i+=1
+      else
+        i+=1
+      end
+      return a_stuff
+    end
+  else
+    return nil
   end
 end
