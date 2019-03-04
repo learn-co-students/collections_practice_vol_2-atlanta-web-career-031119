@@ -9,6 +9,7 @@ def begins_with_r(array)
         return false
       end
     end
+    return true
   else
     return
   end
