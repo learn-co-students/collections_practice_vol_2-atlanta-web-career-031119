@@ -7,6 +7,19 @@ def begins_with_r(array)
     else
       return false
     end
+
+  if array.length>0
+    i=0
+    while i<array.length
+      if array[i].first == 'r'
+        i+=1
+      else
+        return false
+      end
+      return true
+    end
+  else
+    return false
   end
   return true
 end
@@ -40,7 +53,7 @@ def remove_non_strings(array)
 end
 
 def count_elements(array)
-  count_hash=[]
-  count_hash<<array.uniq.collect {|item| [{:count array.count(item), item}]}
+  count_hash=Array.new
+  count_hash<<array.uniq.collect {|item| {:count array.count(item),item}}
   return count_hash
 end
