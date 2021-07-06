@@ -121,7 +121,7 @@ describe 'collections practice vol 2.' do
     # Question 3
 
     it "Return the first element that begins with the letters 'wa'" do
-      expect(first_wa(["candy", :pepper, "wall", :ball, "wacky"])).to eq("wall")
+      expect(first_wa(["candy", "pepper", "wall", "ball", "wacky"])).to eq("wall")
     end
 
   end
